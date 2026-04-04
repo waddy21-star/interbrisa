@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página no encontrada – Corporación Interbrisa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0a1628;
+      --blue: #1a56db;
+      --blue-light: #3b82f6;
+      --white: #ffffff;
+      --accent: #00c2e0;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 2rem;
+      overflow: hidden; position: relative;
+    }
+    body::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(26,86,219,0.2) 0%, transparent 70%);
+    }
+    .grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .content { position: relative; z-index: 2; max-width: 500px; }
+
+    /* Logo SVG */
+    .logo { margin-bottom: 2.5rem; }
+
+    .error-code {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(6rem, 20vw, 10rem);
+      color: var(--accent);
+      line-height: 1;
+      opacity: 0.15;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+      z-index: 1; pointer-events: none;
+      user-select: none;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    h1 em { color: var(--accent); font-style: normal; }
+    p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem; line-height: 1.7;
+      font-weight: 300; margin-bottom: 2.5rem;
+    }
+    .actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--blue); color: var(--white);
+      padding: 0.9rem 2rem; border-radius: 8px;
+      text-decoration: none; font-weight: 500; font-size: 0.95rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); }
+    .btn-secondary {
+      background: transparent; color: var(--white);
+      padding: 0.9rem 2rem; border-radius: 8px;
+      text-decoration: none; font-weight: 500; font-size: 0.95rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .whatsapp {
+      margin-top: 2rem;
+      color: rgba(255,255,255,0.4); font-size: 0.85rem;
+    }
+    .whatsapp a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="error-code">404</div>
+
+  <div class="content">
+    <div class="logo">
+      <svg height="52" viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(2, 2)">
+          <path d="M16 8 C7 16, 1 27, 6 40 C9 48, 15 52, 20 50 C13 42, 12 32, 17 23 C19 18, 20 13, 16 8Z" fill="#1a4a8a"/>
+          <path d="M23 3 C16 12, 13 24, 18 38 C21 47, 27 53, 30 50 C23 41, 22 30, 27 20 C29 14, 29 7, 23 3Z" fill="#2a6abf"/>
+          <path d="M31 0 C25 11, 24 23, 29 37 C33 46, 38 52, 41 49 C34 40, 33 29, 38 18 C40 12, 38 4, 31 0Z" fill="#00a8d4"/>
+          <path d="M23 3 C21 9, 20 15, 21 24 C23 17, 26 10, 31 0 C27 0, 24 1, 23 3Z" fill="#1a56db" opacity="0.6"/>
+        </g>
+        <text x="50" y="22" font-family="Arial Narrow, Arial, sans-serif" font-size="11" font-weight="700" fill="#c8d0dc" letter-spacing="3">CORPORACIÓN</text>
+        <text x="49" y="47" font-family="Arial Narrow, Arial, sans-serif" font-size="26" font-weight="900" font-style="italic" fill="#c0392b" letter-spacing="1">INTERBRISA</text>
+      </svg>
+    </div>
+
+    <h1>Esta página no <em>existe</em></h1>
+    <p>La dirección que buscas no está disponible. Puede que haya sido movida o simplemente no existe. Pero no se preocupe, podemos ayudarle desde aquí.</p>
+
+    <div class="actions">
+      <a href="https://interbrisa.com" class="btn-primary">Ir al inicio →</a>
+      <a href="https://interbrisa.com/#contacto" class="btn-secondary">Contáctenos</a>
+    </div>
+
+    <p class="whatsapp">
+      ¿Necesita ayuda? Escríbanos por <a href="https://wa.me/50664369749" target="_blank">WhatsApp</a>
+    </p>
+  </div>
+</body>
+</html>
