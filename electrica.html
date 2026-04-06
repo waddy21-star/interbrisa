@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servicios Eléctricos – Corporación Interbrisa</title>
+  <meta name="description" content="Instalaciones eléctricas residenciales y comerciales, tableros, iluminación y mantenimiento eléctrico en todo Costa Rica. Corporación Interbrisa."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#0a1628;--blue:#1a56db;--blue-light:#3b82f6;--ice:#e8f4fd;--white:#ffffff;--gray:#64748b;--gray-light:#f1f5f9;--accent:#00c2e0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.8rem 5%;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.07)}
+    .nav-logo svg{height:52px;width:auto;display:block}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-cta{background:var(--blue);color:var(--white)!important;padding:0.5rem 1.2rem;border-radius:6px}
+    .nav-cta:hover{background:var(--blue-light)!important}
+    .page-hero{padding:10rem 5% 5rem;background:var(--navy);position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 60% 50%,rgba(26,86,219,0.3) 0%,transparent 70%)}
+    .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:60px 60px}
+    .page-hero-content{position:relative;z-index:2;animation:fadeUp 0.8s ease both}
+    .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(26,86,219,0.2);border:1px solid rgba(26,86,219,0.4);color:#93c5fd;padding:0.4rem 1rem;border-radius:50px;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.1;margin-bottom:1rem}
+    h1 em{color:#93c5fd;font-style:normal}
+    .hero-desc{color:rgba(255,255,255,0.65);font-size:1.05rem;line-height:1.7;max-width:580px;margin-bottom:2rem}
+    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn-primary{background:var(--blue);color:var(--white);padding:0.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.95rem;display:inline-flex;align-items:center;gap:0.5rem;transition:background 0.2s,transform 0.2s}
+    .btn-primary:hover{background:var(--blue-light);transform:translateY(-2px)}
+    .btn-back{background:transparent;color:rgba(255,255,255,0.7);padding:0.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,0.2);display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.2s}
+    .btn-back:hover{border-color:var(--accent);color:var(--white)}
+    .section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:0.8rem}
+    h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:0.8rem}
+    .section-sub{color:var(--gray);font-size:1rem;line-height:1.7;max-width:520px;margin-bottom:3rem}
+    .services-section{padding:5rem 5%;background:var(--gray-light)}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+    .service-card{background:var(--white);border-radius:16px;padding:2rem;border:1px solid #e2e8f0;transition:transform 0.25s,box-shadow 0.25s;position:relative;overflow:hidden}
+    .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),#93c5fd);opacity:0;transition:opacity 0.25s}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(10,22,40,0.1)}
+    .service-card:hover::before{opacity:1}
+    .service-icon{width:56px;height:56px;background:#eff6ff;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:1.2rem}
+    .service-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:0.6rem}
+    .service-card p{color:var(--gray);font-size:0.9rem;line-height:1.6;margin-bottom:1rem}
+    .service-card ul{list-style:none;display:flex;flex-direction:column;gap:0.4rem}
+    .service-card ul li{color:var(--gray);font-size:0.85rem;display:flex;align-items:center;gap:0.5rem}
+    .service-card ul li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0}
+    .brands-section{padding:4rem 5%;background:var(--white);text-align:center}
+    .brands-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:1.5rem}
+    .brand-item{background:var(--gray-light);border:1px solid #e2e8f0;border-radius:10px;padding:0.8rem 1.5rem;font-weight:700;color:var(--gray);transition:all 0.25s}
+    .brand-item:hover{background:var(--navy);color:var(--white);border-color:var(--navy);transform:translateY(-3px)}
+    .cta-section{padding:5rem 5%;background:var(--navy);text-align:center}
+    .cta-section h2{color:var(--white);margin-bottom:1rem}
+    .cta-section p{color:rgba(255,255,255,0.65);max-width:500px;margin:0 auto 2rem;line-height:1.7}
+    .cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn-wa{background:#25d366;color:var(--white);padding:0.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:0.5rem;transition:opacity 0.2s,transform 0.2s}
+    .btn-wa:hover{opacity:0.9;transform:translateY(-2px)}
+    .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:200;display:flex;align-items:center;gap:0.6rem;background:#25d366;color:var(--white);text-decoration:none;padding:0.8rem 1.2rem;border-radius:50px;font-weight:600;font-size:0.9rem;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s}
+    .wa-float:hover{transform:translateY(-3px)}
+    .wa-float svg{width:22px;height:22px;fill:var(--white);flex-shrink:0}
+    footer{background:#060e1a;color:rgba(255,255,255,0.5);text-align:center;padding:1.8rem 5%;font-size:0.85rem;border-top:1px solid rgba(255,255,255,0.06)}
+    footer span{color:var(--accent)}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:600px){.nav-links{display:none}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="index.html">
+      <svg height="52" viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(2, 2)">
+          <path d="M16 8 C7 16, 1 27, 6 40 C9 48, 15 52, 20 50 C13 42, 12 32, 17 23 C19 18, 20 13, 16 8Z" fill="#1a4a8a"/>
+          <path d="M23 3 C16 12, 13 24, 18 38 C21 47, 27 53, 30 50 C23 41, 22 30, 27 20 C29 14, 29 7, 23 3Z" fill="#2a6abf"/>
+          <path d="M31 0 C25 11, 24 23, 29 37 C33 46, 38 52, 41 49 C34 40, 33 29, 38 18 C40 12, 38 4, 31 0Z" fill="#00a8d4"/>
+          <path d="M23 3 C21 9, 20 15, 21 24 C23 17, 26 10, 31 0 C27 0, 24 1, 23 3Z" fill="#1a56db" opacity="0.6"/>
+        </g>
+        <text x="50" y="22" font-family="Arial Narrow, Arial, sans-serif" font-size="11" font-weight="700" fill="#c8d0dc" letter-spacing="3">CORPORACIÓN</text>
+        <text x="49" y="47" font-family="Arial Narrow, Arial, sans-serif" font-size="26" font-weight="900" font-style="italic" fill="#c0392b" letter-spacing="1">INTERBRISA</text>
+      </svg>
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="index.html#nosotros">Nosotros</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="index.html#contacto" class="nav-cta">Contáctenos</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content">
+    <div class="hero-badge">⚡ Servicios Eléctricos</div>
+    <h1>Instalaciones eléctricas <em>seguras</em> y confiables</h1>
+    <p class="hero-desc">Realizamos instalaciones eléctricas residenciales y comerciales cumpliendo con todas las normas del CFIA y el ICE. Técnicos calificados para proyectos de cualquier escala en todo Costa Rica.</p>
+    <div class="hero-actions">
+      <a href="index.html#contacto" class="btn-primary">Solicitar cotización →</a>
+      <a href="index.html" class="btn-back">← Volver al inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="reveal">
+    <div class="section-label">Nuestros Servicios</div>
+    <h2>Soluciones eléctricas integrales</h2>
+    <p class="section-sub">Desde pequeñas reparaciones hasta instalaciones completas para proyectos comerciales e industriales.</p>
+  </div>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <div class="service-icon">⚡</div>
+      <h3>Instalaciones Eléctricas</h3>
+      <p>Instalaciones completas para proyectos nuevos y remodelaciones, cumpliendo con el Código Eléctrico Nacional.</p>
+      <ul>
+        <li>Instalaciones residenciales y comerciales</li>
+        <li>Cableado estructurado y canalización</li>
+        <li>Tomas de corriente e interruptores</li>
+        <li>Instalación de generadores</li>
+        <li>Certificación y trámites ante el ICE</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔌</div>
+      <h3>Tableros y Paneles</h3>
+      <p>Instalación y modernización de tableros eléctricos para garantizar la seguridad de su instalación.</p>
+      <ul>
+        <li>Tableros residenciales y trifásicos</li>
+        <li>Cambio de breakers y fusibles</li>
+        <li>Paneles de distribución comercial</li>
+        <li>Protección contra sobretensiones</li>
+        <li>Puesta a tierra y protecciones</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💡</div>
+      <h3>Iluminación</h3>
+      <p>Diseño e instalación de sistemas de iluminación eficientes que reducen su consumo eléctrico.</p>
+      <ul>
+        <li>Iluminación LED residencial y comercial</li>
+        <li>Iluminación de emergencia</li>
+        <li>Sistemas de control y dimmer</li>
+        <li>Iluminación exterior y jardines</li>
+        <li>Automatización de iluminación</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🛠️</div>
+      <h3>Mantenimiento Eléctrico</h3>
+      <p>Mantenimiento preventivo y correctivo para mantener sus instalaciones en óptimas condiciones.</p>
+      <ul>
+        <li>Inspección de instalaciones</li>
+        <li>Termografía de tableros</li>
+        <li>Corrección de fallas eléctricas</li>
+        <li>Mantenimiento de plantas eléctricas</li>
+        <li>Contratos de mantenimiento anual</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏭</div>
+      <h3>Proyectos Industriales</h3>
+      <p>Instalaciones eléctricas de media y alta tensión para proyectos industriales y comerciales grandes.</p>
+      <ul>
+        <li>Sistemas trifásicos industriales</li>
+        <li>Instalación de maquinaria</li>
+        <li>Centros de control de motores</li>
+        <li>Sistemas de UPS y respaldo</li>
+        <li>Coordinación con CFIA y AyA</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">☀️</div>
+      <h3>Energía Solar</h3>
+      <p>Instalación de sistemas fotovoltaicos para reducir su factura eléctrica y contribuir al ambiente.</p>
+      <ul>
+        <li>Paneles solares residenciales</li>
+        <li>Sistemas on-grid y off-grid</li>
+        <li>Inversores y baterías</li>
+        <li>Tramitación ante el ARESEP</li>
+        <li>Monitoreo del sistema</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="brands-section reveal">
+  <div class="section-label">Marcas que trabajamos</div>
+  <h2>Los mejores fabricantes del sector eléctrico</h2>
+  <div class="brands-grid">
+    <div class="brand-item">Eaton</div>
+    <div class="brand-item">Schneider Electric</div>
+    <div class="brand-item">Siemens</div>
+    <div class="brand-item">ABB</div>
+    <div class="brand-item">Legrand</div>
+    <div class="brand-item">General Electric</div>
+    <div class="brand-item">Leviton</div>
+    <div class="brand-item">Square D</div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>¿Necesita un servicio eléctrico?</h2>
+  <p>Contáctenos para una inspección gratuita. Le brindamos presupuesto sin costo y garantizamos todos nuestros trabajos.</p>
+  <div class="cta-actions">
+    <a href="https://wa.me/50664369749" target="_blank" class="btn-wa">
+      <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp
+    </a>
+    <a href="index.html#contacto" class="btn-primary">Formulario de contacto →</a>
+  </div>
+</section>
+
+<footer>© 2026 <span>Corporación Interbrisa</span>. Todos los derechos reservados. Costa Rica.</footer>
+
+<a class="wa-float" href="https://wa.me/50664369749" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  ¿Hablamos?
+</a>
+
+<script>
+  const observer=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

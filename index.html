@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corporación Interbrisa – Aire Acondicionado, Refrigeración y Servicios Eléctricos en Costa Rica</title>
+  <meta name="description" content="Corporación Interbrisa ofrece instalación y mantenimiento de aire acondicionado, refrigeración comercial, servicios eléctricos, alarmas, control de acceso y audio y video en todo Costa Rica. Residencial y comercial."/>
+  <meta name="keywords" content="aire acondicionado Costa Rica, instalación AC Costa Rica, mantenimiento aire acondicionado, refrigeración comercial Costa Rica, servicios eléctricos Costa Rica, alarmas Costa Rica, control de acceso Costa Rica, audio video Costa Rica, aire acondicionado San José, técnico aire acondicionado Costa Rica"/>
+  <meta name="author" content="Corporación Interbrisa"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="CR"/>
+  <meta name="geo.placename" content="Costa Rica"/>
+  <link rel="canonical" href="https://interbrisa.com"/>
+  <meta property="og:title" content="Corporación Interbrisa – Aire Acondicionado & Refrigeración en Costa Rica"/>
+  <meta property="og:description" content="Instalación, mantenimiento de AC, refrigeración, servicios eléctricos, alarmas y más en todo Costa Rica."/>
+  <meta property="og:url" content="https://interbrisa.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="es_CR"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Corporación Interbrisa","url":"https://interbrisa.com","telephone":"+50664369749","email":"info@interbrisa.com","description":"Instalación y mantenimiento de aire acondicionado, refrigeración comercial, servicios eléctricos, alarmas, control de acceso y audio y video en todo Costa Rica.","areaServed":"Costa Rica","address":{"@type":"PostalAddress","addressCountry":"CR","addressRegion":"San José"},"serviceType":["Aire Acondicionado","Refrigeración","Servicios Eléctricos","Alarmas","Control de Acceso","Audio y Video"]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#0a1628;--blue:#1a56db;--blue-light:#3b82f6;--ice:#e8f4fd;--white:#ffffff;--gray:#64748b;--gray-light:#f1f5f9;--accent:#00c2e0;--red:#c0392b}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.8rem 5%;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.07)}
+    .nav-logo svg{height:52px;width:auto;display:block}
+    .nav-links{display:flex;gap:2.2rem;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;font-weight:500;letter-spacing:0.04em;transition:color 0.2s}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-cta{background:var(--blue);color:var(--white)!important;padding:0.5rem 1.2rem;border-radius:6px;transition:background 0.2s!important}
+    .nav-cta:hover{background:var(--blue-light)!important}
+
+    /* HAMBURGER */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(10,22,40,0.99);backdrop-filter:blur(12px);padding:1.5rem 5%;z-index:99;border-bottom:1px solid rgba(255,255,255,0.07)}
+    .mobile-menu.open{display:block}
+    .mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1.2rem}
+    .mobile-menu a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:1rem;font-weight:500;display:block;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.07);transition:color 0.2s}
+    .mobile-menu a:hover{color:var(--accent)}
+
+    /* HERO */
+    .hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:0 5%}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(26,86,219,0.25) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(0,194,224,0.12) 0%,transparent 60%)}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:60px 60px}
+
+    /* Particles - snow falls down */
+    .particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+    .particle{position:absolute;border-radius:50%;animation:snowfall linear infinite;opacity:0}
+    @keyframes snowfall{0%{transform:translateY(-10px) scale(0);opacity:0}10%{opacity:0.8}90%{opacity:0.4}100%{transform:translateY(100vh) scale(1);opacity:0}}
+
+    .hero-content{position:relative;z-index:2;max-width:680px}
+    .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(0,194,224,0.12);border:1px solid rgba(0,194,224,0.3);color:var(--accent);padding:0.4rem 1rem;border-radius:50px;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.8rem;animation:fadeUp 0.8s ease both}
+    .hero-badge::before{content:'❄';font-size:0.9rem}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.5rem);color:var(--white);line-height:1.1;margin-bottom:1.4rem;animation:fadeUp 0.8s 0.1s ease both}
+    h1 em{color:var(--accent);font-style:normal}
+    .hero-sub{color:rgba(255,255,255,0.65);font-size:1.1rem;font-weight:300;line-height:1.7;max-width:480px;margin-bottom:2.4rem;animation:fadeUp 0.8s 0.2s ease both}
+    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 0.8s 0.3s ease both}
+    .btn-primary{background:var(--blue);color:var(--white);padding:0.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.95rem;transition:background 0.2s,transform 0.2s;display:inline-flex;align-items:center;gap:0.5rem}
+    .btn-primary:hover{background:var(--blue-light);transform:translateY(-2px)}
+    .btn-secondary{background:transparent;color:var(--white);padding:0.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.95rem;border:1px solid rgba(255,255,255,0.25);transition:border-color 0.2s,transform 0.2s}
+    .btn-secondary:hover{border-color:var(--accent);transform:translateY(-2px)}
+
+    /* Hero stats */
+    .hero-cards{position:absolute;right:5%;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:1rem;animation:fadeUp 0.8s 0.4s ease both}
+
+
+    /* SECTION BASE */
+    section{padding:6rem 5%}
+    .section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:0.8rem}
+    h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);color:var(--navy);line-height:1.2;margin-bottom:1rem}
+    .section-sub{color:var(--gray);font-size:1rem;line-height:1.7;max-width:520px;margin-bottom:3rem}
+
+    /* STATS COUNTER */
+    #estadisticas{background:var(--navy);padding:4rem 5%}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;text-align:center}
+    .stat-item .stat-num{font-family:'Playfair Display',serif;font-size:3rem;color:var(--accent);display:block;line-height:1}
+    .stat-item .stat-label{color:rgba(255,255,255,0.6);font-size:0.9rem;margin-top:0.5rem}
+    .stat-item .stat-icon{font-size:1.8rem;margin-bottom:0.8rem;display:block}
+
+    /* SERVICES */
+    #servicios{background:var(--gray-light)}
+    .area-tabs{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:2.5rem}
+    .area-tab{padding:0.55rem 1.3rem;border-radius:50px;font-size:0.85rem;font-weight:500;cursor:pointer;border:2px solid #e2e8f0;background:var(--white);color:var(--gray);transition:all 0.2s}
+    .area-tab.active,.area-tab:hover{background:var(--blue);border-color:var(--blue);color:var(--white)}
+    .services-area{display:none}
+    .services-area.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .service-card{background:var(--white);border-radius:16px;padding:2rem;border:1px solid #e2e8f0;transition:transform 0.25s,box-shadow 0.25s;position:relative;overflow:hidden}
+    .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--accent));opacity:0;transition:opacity 0.25s}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(10,22,40,0.1)}
+    .service-card:hover::before{opacity:1}
+    .service-icon{width:52px;height:52px;background:var(--ice);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.2rem}
+    .service-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--navy);margin-bottom:0.6rem}
+    .service-card p{color:var(--gray);font-size:0.9rem;line-height:1.6}
+
+    /* SERVICE AREA CARDS */
+    .service-areas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:1rem}
+    .service-area-card{background:var(--white);border-radius:20px;padding:2.5rem;border:1px solid #e2e8f0;text-decoration:none;color:var(--navy);display:flex;flex-direction:column;gap:1rem;transition:transform 0.25s,box-shadow 0.25s;position:relative;overflow:hidden}
+    .service-area-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--accent));opacity:0;transition:opacity 0.25s}
+    .service-area-card:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(10,22,40,0.12)}
+    .service-area-card:hover::before{opacity:1}
+    .sac-icon{font-size:2.5rem}
+    .service-area-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy)}
+    .service-area-card p{color:var(--gray);font-size:0.95rem;line-height:1.6;flex:1}
+    .sac-btn{display:inline-flex;align-items:center;color:var(--blue);font-weight:600;font-size:0.9rem;margin-top:0.5rem}
+
+    /* BRANDS */
+    #marcas{background:var(--white);padding:4rem 5%;text-align:center}
+    .brands-category{margin-bottom:2.5rem}
+    .brands-cat-title{font-size:0.85rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+    #marcas h2{margin-bottom:0.5rem}
+    #marcas .section-sub{margin:0 auto 2.5rem}
+    .brands-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.5rem}
+    .brand-item{background:var(--gray-light);border:1px solid #e2e8f0;border-radius:12px;padding:1rem 1.8rem;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gray);letter-spacing:0.05em;transition:all 0.25s;cursor:default}
+    .brand-item:hover{background:var(--navy);color:var(--white);border-color:var(--navy);transform:translateY(-3px);box-shadow:0 10px 25px rgba(10,22,40,0.15)}
+
+    /* ABOUT */
+    #nosotros{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .about-visual{background:linear-gradient(135deg,var(--navy) 0%,#1a3a6b 100%);border-radius:20px;padding:3rem;color:var(--white);position:relative;overflow:hidden}
+    .about-visual::after{content:'❄';position:absolute;font-size:12rem;bottom:-2rem;right:-1rem;opacity:0.05;line-height:1}
+    .about-visual h3{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1rem}
+    .about-visual p{color:rgba(255,255,255,0.75);line-height:1.7;font-weight:300}
+    .about-features{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:0.8rem}
+    .about-features li{display:flex;align-items:center;gap:0.8rem;color:rgba(255,255,255,0.85);font-size:0.9rem}
+    .about-features li::before{content:'✓';width:22px;height:22px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--navy);font-weight:700;flex-shrink:0}
+
+    /* FAQ */
+    #faq{background:var(--gray-light)}
+    .faq-list{max-width:760px;display:flex;flex-direction:column;gap:0.8rem}
+    .faq-item{background:var(--white);border-radius:12px;border:1px solid #e2e8f0;overflow:hidden}
+    .faq-q{width:100%;text-align:left;background:none;border:none;padding:1.2rem 1.5rem;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color 0.2s}
+    .faq-q:hover{color:var(--blue)}
+    .faq-icon{font-size:1.2rem;transition:transform 0.3s;flex-shrink:0;color:var(--blue)}
+    .faq-item.open .faq-icon{transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.35s ease;padding:0 1.5rem;color:var(--gray);font-size:0.95rem;line-height:1.7}
+    .faq-item.open .faq-a{max-height:300px;padding:0 1.5rem 1.2rem}
+
+    /* CONTACT */
+    #contacto{background:var(--navy)}
+    #contacto h2{color:var(--white)}
+    #contacto .section-label{color:var(--accent)}
+    #contacto .section-sub{color:rgba(255,255,255,0.6)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+    .contact-info{display:flex;flex-direction:column;gap:1.5rem}
+    .contact-item{display:flex;align-items:flex-start;gap:1rem}
+    .contact-item-icon{width:44px;height:44px;background:rgba(255,255,255,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+    .contact-item-text{color:rgba(255,255,255,0.75);font-size:0.9rem;line-height:1.5}
+    .contact-item-text strong{color:var(--white);display:block;margin-bottom:0.2rem}
+    .contact-item-text a{color:var(--accent);text-decoration:none}
+    .contact-form{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2.5rem}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+    .form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
+    .form-group label{color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:500}
+    .form-group input,.form-group textarea,.form-group select{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:0.75rem 1rem;color:var(--white);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;width:100%}
+    .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.3)}
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent)}
+    .form-group textarea{resize:vertical;min-height:120px}
+    .form-group select option{background:var(--navy)}
+    .btn-submit{width:100%;background:linear-gradient(135deg,var(--blue),var(--accent));color:var(--white);border:none;padding:1rem;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:opacity 0.2s,transform 0.2s}
+    .btn-submit:hover{opacity:0.9;transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{background:#060e1a;color:rgba(255,255,255,0.5);text-align:center;padding:1.8rem 5%;font-size:0.85rem;border-top:1px solid rgba(255,255,255,0.06)}
+    footer span{color:var(--accent)}
+
+    /* WHATSAPP FLOAT */
+    .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:200;display:flex;align-items:center;gap:0.6rem;background:#25d366;color:var(--white);text-decoration:none;padding:0.8rem 1.2rem;border-radius:50px;font-weight:600;font-size:0.9rem;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;animation:fadeUp 1s 0.8s ease both}
+    .wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(37,211,102,0.5)}
+    .wa-float svg{width:22px;height:22px;fill:var(--white);flex-shrink:0}
+    .wa-float .wa-text{white-space:nowrap}
+
+    /* ANIMATIONS */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .hero-cards{display:none}
+      #nosotros{grid-template-columns:1fr;gap:2.5rem}
+      .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+      .form-row{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      nav{padding:0.8rem 4%}
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .nav-logo svg{height:38px}
+      section{padding:4rem 5%}
+      .wa-float .wa-text{display:none}
+      .wa-float{padding:0.9rem}
+      .wa-float svg{width:26px;height:26px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <svg height="52" viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(2, 2)">
+          <path d="M16 8 C7 16, 1 27, 6 40 C9 48, 15 52, 20 50 C13 42, 12 32, 17 23 C19 18, 20 13, 16 8Z" fill="#1a4a8a"/>
+          <path d="M23 3 C16 12, 13 24, 18 38 C21 47, 27 53, 30 50 C23 41, 22 30, 27 20 C29 14, 29 7, 23 3Z" fill="#2a6abf"/>
+          <path d="M31 0 C25 11, 24 23, 29 37 C33 46, 38 52, 41 49 C34 40, 33 29, 38 18 C40 12, 38 4, 31 0Z" fill="#00a8d4"/>
+          <path d="M23 3 C21 9, 20 15, 21 24 C23 17, 26 10, 31 0 C27 0, 24 1, 23 3Z" fill="#1a56db" opacity="0.6"/>
+        </g>
+        <text x="50" y="22" font-family="Arial Narrow, Arial, sans-serif" font-size="11" font-weight="700" fill="#c8d0dc" letter-spacing="3">CORPORACIÓN</text>
+        <text x="49" y="47" font-family="Arial Narrow, Arial, sans-serif" font-size="26" font-weight="900" font-style="italic" fill="#c0392b" letter-spacing="1">INTERBRISA</text>
+      </svg>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#marcas">Marcas</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto" class="nav-cta">Contáctenos</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#servicios" onclick="closeMobile()">Servicios</a></li>
+      <li><a href="#marcas" onclick="closeMobile()">Marcas</a></li>
+      <li><a href="#nosotros" onclick="closeMobile()">Nosotros</a></li>
+      <li><a href="#faq" onclick="closeMobile()">FAQ</a></li>
+      <li><a href="#contacto" onclick="closeMobile()">Contáctenos</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Soluciones Integrales</div>
+      <h1>Confort y tecnología que <em>respiran</em> tranquilidad</h1>
+      <p class="hero-sub">Instalación, mantenimiento y servicios eléctricos para sistemas de aire acondicionado, refrigeración y más en todo Costa Rica.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary">Solicitar servicio →</a>
+        <a href="#servicios" class="btn-secondary">Ver servicios</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- STATS COUNTER -->
+  <section id="estadisticas">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-icon">❄️</span>
+        <span class="stat-num" data-target="500">0</span>
+        <div class="stat-label">Clientes satisfechos</div>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-icon">🔧</span>
+        <span class="stat-num" data-target="1200">0</span>
+        <div class="stat-label">Servicios realizados</div>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-icon">⭐</span>
+        <span class="stat-num" data-target="10">0</span>
+        <div class="stat-label">Años de experiencia</div>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-icon">🌎</span>
+        <span class="stat-num" data-target="7">0</span>
+        <div class="stat-label">Provincias atendidas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="servicios">
+    <div class="reveal">
+      <div class="section-label">Nuestros Servicios</div>
+      <h2>Soluciones completas para su empresa y hogar</h2>
+      <p class="section-sub">Contamos con tres áreas especializadas para atender todas sus necesidades técnicas con personal certificado y materiales de primera calidad.</p>
+    </div>
+    <div class="service-areas-grid reveal">
+      <a href="refrigeracion.html" class="service-area-card">
+        <div class="sac-icon">❄️</div>
+        <h3>Refrigeración & AC</h3>
+        <p>Instalación, mantenimiento y reparación de sistemas de aire acondicionado y refrigeración residencial y comercial.</p>
+        <span class="sac-btn">Ver servicios →</span>
+      </a>
+      <a href="electrica.html" class="service-area-card">
+        <div class="sac-icon">⚡</div>
+        <h3>Servicios Eléctricos</h3>
+        <p>Instalaciones eléctricas, tableros, iluminación y mantenimiento eléctrico para hogares y empresas.</p>
+        <span class="sac-btn">Ver servicios →</span>
+      </a>
+      <a href="adicionales.html" class="service-area-card">
+        <div class="sac-icon">🛡️</div>
+        <h3>Servicios Adicionales</h3>
+        <p>Alarmas, supresión de incendios, audio y video, control de acceso y trabajos civiles.</p>
+        <span class="sac-btn">Ver servicios →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section id="marcas">
+    <div class="reveal">
+      <div class="section-label">Marcas que trabajamos</div>
+      <h2>Trabajamos con las mejores marcas</h2>
+      <p class="section-sub">Instalamos y damos servicio técnico a los principales fabricantes del mercado, garantizando calidad y respaldo.</p>
+    </div>
+    <div class="brands-category reveal">
+      <div class="brands-cat-title">❄️ Refrigeración & AC</div>
+      <div class="brands-grid">
+        <div class="brand-item">LG</div>
+        <div class="brand-item">Daikin</div>
+        <div class="brand-item">Carrier</div>
+        <div class="brand-item">Mitsubishi</div>
+        <div class="brand-item">Samsung</div>
+        <div class="brand-item">Trane</div>
+        <div class="brand-item">York</div>
+        <div class="brand-item">Midea</div>
+        <div class="brand-item">Panasonic</div>
+        <div class="brand-item">Lennox</div>
+      </div>
+    </div>
+    <div class="brands-category reveal">
+      <div class="brands-cat-title">⚡ Servicios Eléctricos</div>
+      <div class="brands-grid">
+        <div class="brand-item">Eaton</div>
+        <div class="brand-item">Schneider Electric</div>
+        <div class="brand-item">Siemens</div>
+        <div class="brand-item">ABB</div>
+        <div class="brand-item">Legrand</div>
+        <div class="brand-item">General Electric</div>
+      </div>
+    </div>
+    <div class="brands-category reveal">
+      <div class="brands-cat-title">🛡️ Servicios Adicionales</div>
+      <div class="brands-grid">
+        <div class="brand-item">Bosch</div>
+        <div class="brand-item">Hikvision</div>
+        <div class="brand-item">Dahua</div>
+        <div class="brand-item">Honeywell</div>
+        <div class="brand-item">Axis</div>
+        <div class="brand-item">ZKTeco</div>
+        <div class="brand-item">Notifier</div>
+        <div class="brand-item">Epson</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="nosotros" style="padding:6rem 5%">
+    <div class="about-visual reveal">
+      <h3>¿Por qué elegir Corporación Interbrisa?</h3>
+      <p>Somos expertos en climatización, servicios eléctricos y soluciones de seguridad. Calidad, rapidez y confiabilidad son nuestra garantía en cada trabajo que realizamos.</p>
+      <ul class="about-features">
+        <li>Técnicos certificados y con experiencia</li>
+        <li>Materiales y repuestos de primera calidad</li>
+        <li>Presupuesto sin costo y sin compromiso</li>
+        <li>Garantía en todos nuestros servicios</li>
+        <li>Atención en todo el país</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <div class="section-label">Sobre Nosotros</div>
+      <h2>Más de una década cuidando su confort y seguridad</h2>
+      <p class="section-sub">En Corporación Interbrisa nos especializamos en brindar soluciones integrales de climatización, electricidad y seguridad para hogares y empresas en Costa Rica. Nuestro compromiso es su satisfacción.</p>
+      <a href="#contacto" class="btn-primary" style="margin-top:1rem;display:inline-flex">Hablar con un experto →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="reveal">
+      <div class="section-label">Preguntas Frecuentes</div>
+      <h2>Resolvemos sus dudas</h2>
+      <p class="section-sub">Las preguntas más comunes de nuestros clientes, respondidas de forma clara y directa.</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cada cuánto tiempo se debe dar mantenimiento al aire acondicionado? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Se recomienda realizar mantenimiento preventivo cada 3 a 6 meses dependiendo del uso. Un equipo residencial con uso moderado puede mantenerse cada 6 meses, mientras que uno comercial de uso intensivo requiere revisión cada 3 meses para mantener su eficiencia y prolongar su vida útil.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cuánto tiempo tarda una instalación de AC? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Una instalación estándar de un minisplit residencial tarda entre 3 y 5 horas. Instalaciones más complejas como sistemas centrales o múltiples equipos pueden tardar uno o varios días según el proyecto. Siempre coordinamos el tiempo con el cliente antes de comenzar.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Ofrecen garantía en sus servicios? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Sí, todos nuestros trabajos cuentan con garantía. La instalación tiene garantía de mano de obra y los repuestos utilizados tienen la garantía del fabricante. Ante cualquier inconveniente posterior al servicio, lo atendemos sin costo adicional dentro del período de garantía.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Atienden en todo el país? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Sí, brindamos servicio en las 7 provincias de Costa Rica. Contamos con técnicos disponibles para atender tanto el Gran Área Metropolitana como zonas más alejadas. Contáctenos y coordinamos la visita según su ubicación.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿El presupuesto tiene algún costo? <span class="faq-icon">+</span></button>
+        <div class="faq-a">No, el presupuesto es completamente gratuito y sin compromiso. Uno de nuestros técnicos visita su propiedad, evalúa sus necesidades y le entrega una cotización detallada. Usted decide si desea continuar con el servicio.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Qué marcas de aire acondicionado instalan? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Trabajamos con todas las marcas principales del mercado: LG, Daikin, Carrier, Mitsubishi, Samsung, Trane, York, Midea, Panasonic y Lennox, entre otras. Si su equipo es de otra marca, consúltenos y con gusto le ayudamos.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contacto">
+    <div class="reveal">
+      <div class="section-label">Contacto</div>
+      <h2>Estamos listos para ayudarle</h2>
+      <p class="section-sub">Escríbanos o llámenos por WhatsApp. Le respondemos en menos de 24 horas con una solución para su necesidad.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text"><strong>Ubicación</strong>Costa Rica — Todo el país</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <strong>Correo electrónico</strong>
+            <a href="#" id="email-link">info&#64;interbrisa&#46;com</a>
+            <script>var e="info"+"@"+"interbrisa.com";document.getElementById("email-link").href="mailto:"+e;</script>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div class="contact-item-text"><strong>WhatsApp</strong><a href="https://wa.me/50664369749" target="_blank">+506 6436 9749</a></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form id="contact-form">
+          <input type="hidden" name="_replyto" value="info@interbrisa.com"/>
+          <input type="hidden" name="_subject" value="Nuevo contacto desde interbrisa.com"/>
+          <div class="form-row">
+            <div class="form-group"><label>Nombre</label><input type="text" name="nombre" placeholder="Juan Pérez" required/></div>
+            <div class="form-group"><label>Correo</label><input type="email" name="correo" placeholder="correo@ejemplo.com" required/></div>
+          </div>
+          <div class="form-group">
+            <label>Servicio de interés</label>
+            <select name="servicio">
+              <option value="">Seleccione un servicio...</option>
+              <optgroup label="❄️ Refrigeración & AC">
+                <option>Instalación AC</option><option>Mantenimiento AC</option><option>Refrigeración Comercial</option><option>Diagnóstico y Reparación</option>
+              </optgroup>
+              <optgroup label="⚡ Servicios Eléctricos">
+                <option>Instalaciones Eléctricas</option><option>Tableros y Paneles</option><option>Iluminación</option><option>Mantenimiento Eléctrico</option>
+              </optgroup>
+              <optgroup label="🛡️ Servicios Adicionales">
+                <option>Alarmas y Supresión contra Incendios</option><option>Audio y Video</option><option>Control de Acceso</option><option>Trabajos Civiles</option>
+              </optgroup>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Mensaje</label><textarea name="mensaje" placeholder="Cuéntenos sobre su necesidad..." required></textarea></div>
+          <button class="btn-submit" id="submit-btn">Enviar mensaje →</button>
+          <div id="form-msg" style="display:none;margin-top:1rem;padding:0.8rem 1rem;border-radius:8px;font-size:0.9rem;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 <span>Corporación Interbrisa</span>. Todos los derechos reservados. San José, Costa Rica.
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a class="wa-float" href="https://wa.me/50664369749" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="wa-text">¿Hablamos?</span>
+  </a>
+
+  <script>
+    // Hamburger menu
+    function closeMobile(){document.getElementById('mobile-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open')}
+    document.getElementById('hamburger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('mobile-menu').classList.toggle('open')});
+
+    // Hero particles
+    const pc=document.getElementById('particles');
+    for(let i=0;i<30;i++){
+      const p=document.createElement('div');
+      p.className='particle';
+      const size=Math.random()*4+2;
+      p.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}%;background:rgba(0,194,224,${Math.random()*0.4+0.1});animation-duration:${Math.random()*15+10}s;animation-delay:${Math.random()*10}s`;
+      pc.appendChild(p);
+    }
+
+    // Stats counter
+    function animateCounter(el){
+      const target=+el.dataset.target;
+      const duration=2000;
+      const step=target/duration*16;
+      let current=0;
+      const timer=setInterval(()=>{
+        current+=step;
+        if(current>=target){current=target;clearInterval(timer)}
+        el.textContent=(target>=100?'+':'')+Math.floor(current);
+      },16);
+    }
+    const counterObs=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);counterObs.unobserve(e.target)}});
+    },{threshold:0.5});
+    document.querySelectorAll('.stat-num[data-target]').forEach(el=>counterObs.observe(el));
+
+    // Formspree
+    const form=document.getElementById('contact-form');
+    const btn=document.getElementById('submit-btn');
+    const msg=document.getElementById('form-msg');
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();btn.textContent='Enviando...';btn.disabled=true;
+      try{
+        const res=await fetch('https://formspree.io/f/mzdkaogv',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+        if(res.ok){msg.style.cssText='display:block;background:rgba(0,194,100,0.15);border:1px solid rgba(0,194,100,0.3);color:#4ade80';msg.textContent='✓ Mensaje enviado. Le contactaremos pronto.';form.reset()}
+        else throw new Error();
+      }catch{msg.style.cssText='display:block;background:rgba(220,50,50,0.15);border:1px solid rgba(220,50,50,0.3);color:#f87171';msg.textContent='✗ Hubo un error. Intente de nuevo o escríbanos directamente.'}
+      btn.textContent='Enviar mensaje →';btn.disabled=false;
+    });
+
+    // Scroll reveal
+    const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // FAQ
+    function toggleFaq(btn){const item=btn.parentElement;item.classList.toggle('open')}
+
+
+  </script>
+</body>
+</html>
